@@ -19,8 +19,8 @@ class Day01 {
 
     private fun solvePair(input: Set<Int>): Int =
             lazyPairCombinations(input)
-                    .filter { pair -> pair.first + pair.second == 2020 }
-                    .map { pair -> pair.first * pair.second }
+                    .filter { (a, b) -> a + b == 2020 }
+                    .map { (a, b) -> a * b }
                     .first()
 
 
@@ -53,8 +53,8 @@ class Day01 {
 
     private fun solveTriple(input: Set<Int>): Int =
             lazyTripleCombinations(input)
-                    .filter { triple -> triple.first + triple.second + triple.third == 2020 }
-                    .map { triple -> triple.first * triple.second * triple.third }
+                    .filter { (a, b, c) -> a + b + c == 2020 }
+                    .map { (a, b, c) -> a * b * c }
                     .first()
 
 
